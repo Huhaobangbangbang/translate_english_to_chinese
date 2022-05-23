@@ -6,7 +6,7 @@
 # totally free
 from baidu_translate import TranslateClient
 from time import sleep
-
+from tqdm import tqdm
 def analyse_txt():
     with open('./question.txt','r') as fp:
         contents = fp.readlines()
@@ -26,11 +26,15 @@ def test():
 def translate_by_baidu(en_list):
     client = TranslateClient()
     en_zh_list = []
-    for sample in en_list:
+    for sample in tqdm(en_list):
         try:
             zh_sentence = client.en2zh(sample).text
+           
+            print(zh_sentence)
             en_zh_list.append("{} *** {}\n".format(sample, zh_sentence))
-            print(sample,'***',zh_sentence)
+            print(sample,zh_sentence)
+            print('***')
+            print(zh_sentence)
             sleep(1.2)
         except:
             pass
@@ -43,3 +47,4 @@ if __name__ == '__main__':
     en_zh_list = translate_by_baidu(en_list)
     with open('./en_zh_question.txt', 'w') as f:
         f.writelines(en_zh_list)
+    
