@@ -17,4 +17,5 @@ Example:
 
 
 You need to register on http://api.fanyi.baidu.com/product/112 to get APPID and SECRETKEY
+
 参考链接： https://github.com/mymusise/Baidu-Translation-SDK
