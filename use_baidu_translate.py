@@ -29,10 +29,8 @@ def translate_by_baidu(en_list):
     for sample in tqdm(en_list):
         try:
             zh_sentence = client.en2zh(sample).text
-           
-            print(zh_sentence)
             en_zh_list.append("{} *** {}\n".format(sample, zh_sentence))
-            print(sample,zh_sentence)
+            print(sample)
             print('***')
             print(zh_sentence)
             sleep(1.2)
