@@ -24,23 +24,22 @@ def test():
 
 
 def translate_by_baidu(en_list):
+    client = TranslateClient()
     en_zh_list = []
     for sample in en_list:
         try:
             zh_sentence = client.en2zh(sample).text
             en_zh_list.append("{} *** {}\n".format(sample, zh_sentence))
-            print(sample,zh_sentence)
-            break
+            print(sample,'***',zh_sentence)
             sleep(1.2)
         except:
             pass
-
     return en_zh_list
 
 if __name__ == '__main__':
-
+    
     en_list = analyse_txt()
     #test()
     en_zh_list = translate_by_baidu(en_list)
     with open('./en_zh_question.txt', 'w') as f:
-        f.writelines(end_list)
+        f.writelines(en_zh_list)
