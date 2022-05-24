@@ -3,7 +3,7 @@ We have two choice.One is multi-threaded, the other is free single-threaded prov
 
 
 
-# Add a environment variable
+# Add a environment variable(free single-threaded provided by baidu)
 export BAIDU_TRANSLATE_API_AUTH="./baidu_translate/auth.json"
 
 The auth-file contains your service account key.
