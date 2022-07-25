@@ -1,5 +1,5 @@
 # translate_english_to_chinese
-We have two choice.One is multi-threaded, the other is free single-threaded provided by baidu
+We have two choice.One is multi-threaded, the other is single-threaded provided by baidu
 
 
 
@@ -18,5 +18,6 @@ Example:
 
 
 You need to register on http://api.fanyi.baidu.com/product/112 to get APPID and SECRETKEY
+If you exceed the number of characters used, Baidu will charge you
 
-参考链接： https://github.com/mymusise/Baidu-Translation-SDK
+Reference link： https://github.com/mymusise/Baidu-Translation-SDK
